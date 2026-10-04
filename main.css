@@ -1,0 +1,25 @@
+ 
+        /* Mengatur posisi logo dan teks agar sejajar horizontal */
+        .logo-container {
+            display: flex;
+            align-items: center; /* Menyelaraskan teks agar berada di tengah secara vertikal */
+            gap: 12px;           /* Memberikan jarak antara logo dan teks */
+        }
+        
+        .logo-img {
+            width: 100px;         /* Atur ukuran lebar logo sesuai kebutuhan */
+            height: auto;
+        }
+
+        .logo-text {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0;
+        }
+        .logo-subtext {
+            font-size: 14px;
+            color: #666;
+            margin: 0;
+        }
+
+

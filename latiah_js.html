@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Praktikum JS</title>
+</head>
+<script src="latihan_js.js"></script>
+<!-- Elemen Input dan Button -->
+<label for="inputNilai">Masukkan Nilai:</label>
+<input type="number" id="inputNilai" placeholder="Contoh: 80">
+<button onclick="cekKelulusan()">Cek Hasil</button>
+<!-- Kode JavaScript -->
+<script>
+  function cekKelulusan() {
+    // Membaca nilai dari input
+    let nilai = document.getElementById("inputNilai").value;
+
+    // Validasi jika input kosong
+    if (nilai === "") {
+      alert("Harap masukkan nilai terlebih dahulu!");
+      return;
+    }
+
+    // Mengubah nilai teks menjadi tipe angka
+    nilai = Number(nilai);
+
+    // Mengecek kondisi kelulusan dan menampilkan alert
+    if (nilai >= 75) {
+      alert("Status: LULUS (Nilai Anda: " + nilai + ")");
+    } else {
+      alert("Status: TIDAK LULUS (Nilai Anda: " + nilai + ")");
+    }
+  }
+</script>
+
+<script>
+  // Deklarasi fungsi
+  function hitungLuas(panjang, lebar) {
+    return panjang * lebar;
+  }
+
+  // Memanggil fungsi
+  let hasil = hitungLuas(10, 5);
+  console.log("Luas Persegi Panjang: " + hasil); // Output: 50
+</script>
+<body>
+  <h1 id="sapaan">Pesan awal</h1>
+
+  <script>
+    console.log("Kode JS internal berhasil dijalankan!");
+  </script>
+<button onclick="alert('Halo! Selamat belajar JavaScript!')">Klik Saya</button>
+
+<h1 id="judul">Teks Awal</h1>
+<button onclick="ubahTampilan()">Ubah Tampilan</button>
+
+<input type="text" id="inputNama" placeholder="Ketik nama Anda..." onkeyup="tampilkanNama()">
+<p>Halo, <span id="outputNama">...</span></p>
+
+<script>
+  function tampilkanNama() {
+    let input = document.getElementById("inputNama").value;
+    document.getElementById("outputNama").innerText = input;
+  }
+</script>
+<script>
+  function ubahTampilan() {
+    let el = document.getElementById("judul");
+    el.innerText = "Teks Berhasil Diubah!";
+    el.style.color = "skyblue";
+  }
+</script>
+
+</body>
+</html>
+
